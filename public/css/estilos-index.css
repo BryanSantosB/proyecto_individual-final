@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@1,200&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Kanit', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+body{
+    background-color: #FAFAFA;
+}
+
+.contenedor-nav{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: transparent;
+    color: hsl(0, 0%, 41%);
+}
+
+.contenedor-nav a:visited{
+    color: hsl(0, 0%, 41%);
+}
+
+.contenedor-nav select{
+    color: hsl(0, 0%, 41%);
+}
+
+.contenedor-nav a:hover{
+    color: hsl(0, 0%, 8%);
+}
+
+.contenedor-nav :hover{
+    color: hsl(0, 0%, 8%);
+}
+
+#btn-register{
+    padding: 5px 20px;
+    border: 1px solid hsl(0, 0%, 8%);
+    border-radius: 10px;
+}
+
+.contenedor-logo-enlaces{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contenedor-logo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.lista-enlaces{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+.lista-enlaces li{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.lista-enlaces select{
+    border: none;
+    background-color: transparent;
+}
+
+.lista-enlaces select:focus{
+    border: none;
+    background-color: rebeccapurple;
+}
+
+.select-check{
+    display: none;
+}
+
+.caja-select{
+    position: absolute;
+    top: 40px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px 10px rgba(0,0,0,.05);
+    display: none;
+    width: 150px;
+    height: auto;
+    background-color: white;
+    padding: 10px;
+}
+
+#caja1{
+    right: 0;
+}
+
+#caja2{
+    left: 0;
+}
+
+#i-2-1{
+    display: none;
+}
+
+#i-2-2{
+    display: none;
+}
+
+.opcion{
+    margin: 5px auto;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+.contenedor-logo{
+    margin-right: 70px;
+}
+
+.logo{
+    position: relative;
+    top: 5px;
+}
+
+.log-Reg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+
