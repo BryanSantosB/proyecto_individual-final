@@ -1,31 +1,84 @@
+//Select1
 const check1 = document.getElementById("check-1");
 const i_1_1 = document.getElementById("i-1-1");
 const i_2_1 = document.getElementById("i-2-1");
 const caja_opciones1 = document.getElementById("caja1");
 
+//Select2
 const check2 = document.getElementById("check-2");
 const i_1_2 = document.getElementById("i-1-2");
 const i_2_2 = document.getElementById("i-2-2");
 const caja_opciones2 = document.getElementById("caja2");
 
+//Menú responsive 
+const check_res = document.getElementById("check-res");
+const menu = document.getElementById("contenedor-en");
+const overlay = document.getElementById("oscuro");
+
+//Cambiar ícono del elemento select y mostrar sus opciones
 function cambiarIconoMostrarOpciones(check, i1, i2, caja){
     if(check.checked){
         i1.style.display = "none";
-        i2.style.display = "block";
+        i2.style.display = "inline-block";
         caja.style.display = "block";
     }else{
-        i1.style.display = "block";
+        i1.style.display = "inline-block";
         i2.style.display = "none";
         caja.style.display = "none";
     }
 }
 
+function comprobarCheck(){
+    if(check_res.checked){
+        //menu.style.display="block";
+        menu.style.left = "45%";
+        menu.style.boxShadow = "-5px 16px 20px rgba(0,0,0,0.25)";
+    }else{
+        //menu.style.display = "none";
+        menu.style.left = "100%";
+        menu.style.boxShadow = "none";
+    }
+}
+
+function oscuro() {
+    if (check_res.checked) {
+        overlay.style.display = "block";
+    } else {
+        overlay.style.display = "none";
+    }
+}
+
+//Eventos select
 check1.addEventListener("change", function(){
-    cambiarIconoMostrarOpciones(check1, i_1_1,i_2_1,caja_opciones1);
-    console.log("java");
+    cambiarIconoMostrarOpciones(check1, i_1_1,i_2_1 ,caja_opciones1);
 })
 
 check2.addEventListener("change", function(){
     cambiarIconoMostrarOpciones(check2, i_1_2,i_2_2,caja_opciones2);
-    console.log("java");
 })
+
+
+check_res.addEventListener("change", function(){
+    comprobarCheck();
+    oscuro();
+});
+
+window.addEventListener('load', function() { //Evento al cargar página
+
+    function desmarcarCheckbox() {
+        if (window.innerWidth > 767) {
+            check_res.checked = false;
+            comprobarCheck();
+            oscuro();
+        }
+    }
+    this.addEventListener('resize', desmarcarCheckbox); //Evento al redimensionar página
+    desmarcarCheckbox();
+});
+
+
+
+
+
+
+

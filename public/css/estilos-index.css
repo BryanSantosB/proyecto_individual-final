@@ -15,7 +15,12 @@ body{
     background-color: #FAFAFA;
 }
 
+.label{
+    display: inline-block;
+}
+
 .contenedor-nav{
+    position: relative;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -23,6 +28,7 @@ body{
     padding: 15px 30px;
     background-color: transparent;
     color: hsl(0, 0%, 41%);
+    z-index: 1000;
 }
 
 .contenedor-nav a:visited{
@@ -47,11 +53,15 @@ body{
     border-radius: 10px;
 }
 
-.contenedor-logo-enlaces{
+.contenedor-enlaces{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 90%;
+    gap: 40px;
 }
+
+
 
 .contenedor-logo{
     display: flex;
@@ -95,10 +105,15 @@ body{
     border-radius: 8px;
     box-shadow: 0 0 20px 10px rgba(0,0,0,.05);
     display: none;
-    width: 150px;
+    width: auto;
     height: auto;
     background-color: white;
-    padding: 10px;
+    padding: 10px 20px;
+}
+
+.caja-select a{
+    display: block;
+    width: 80px;
 }
 
 #caja1{
@@ -117,20 +132,31 @@ body{
     display: none;
 }
 
+#check-res{
+    display: none;
+}
+
 .opcion{
     margin: 5px auto;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+.opcion i{
+    margin-right: 10px;
+}
 
+.con-i{
+    width: 30%;
+    text-align: center;
+}
 
-
-
-
-
-
-
-
+.con-a{
+    width: 70%;
+    text-align: left;
+}
 
 .contenedor-logo{
     margin-right: 70px;
@@ -148,4 +174,80 @@ body{
     gap: 40px;
 }
 
+.check-responsive{
+    display: none;
+}
 
+.oscurecer {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    transition: all 0.3;
+    z-index: 700; 
+}
+
+.cerrar{
+    display: none;
+}
+
+
+
+
+
+@media screen and (max-width: 767px) {
+    .contenedor-enlaces{
+        display: block;
+        position: absolute;
+        background-color: white;
+        flex-direction: column;
+        left: 50%;
+        top: 0;
+        width: 55%;
+        height: 100vh;
+        transition: all 0.3s;
+    }
+
+    .lista-enlaces{
+        flex-direction: column;
+    }
+
+    .log-Reg{
+        flex-direction: column;
+    }
+
+    .check-responsive{
+        display: block;
+    }
+
+    .cerrar{
+        display: block;
+        padding: 10px;
+        display: flex;
+        justify-content: right;
+        align-items: center;
+    }
+
+    .caja-select{
+        position: relative;
+        top: 0;
+        width: 100%;
+        box-shadow: none;
+    }
+
+    .lista-enlaces li{
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        flex-direction: column;
+        width: 100%;
+        margin-left: 50px;
+    }
+
+    .log-Reg{
+        margin-top: 40px;
+    }
+}
