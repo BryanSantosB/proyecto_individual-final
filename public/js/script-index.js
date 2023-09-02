@@ -28,11 +28,11 @@ function cambiarIconoMostrarOpciones(check, i1, i2, caja){
     }
 }
 
-function comprobarCheck(){
-    if(check_res.checked){
+function comprobarCheck() {
+    if (check_res.checked) {
         menu.style.left = "45%";
         menu.style.boxShadow = "-5px 16px 20px rgba(0,0,0,0.25)";
-    }else{
+    } else {
         menu.style.left = "-100%";
         menu.style.boxShadow = "none";
     }
@@ -64,7 +64,7 @@ check_res.addEventListener("change", function(){
 
 //Evento al recargar la página o redimensionar
 window.addEventListener('load', function() { //Evento al cargar página
-
+        
     function desmarcarCheckbox() {
         if (window.innerWidth > 767) {
             check_res.checked = false;
@@ -75,3 +75,4 @@ window.addEventListener('load', function() { //Evento al cargar página
     this.addEventListener('resize', desmarcarCheckbox); //Evento al redimensionar página
     desmarcarCheckbox();
 });
+

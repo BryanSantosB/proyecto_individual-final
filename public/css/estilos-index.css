@@ -330,7 +330,7 @@ opciones del nav (móvil)*/
         position: absolute;
         background-color: white;
         flex-direction: column;
-        left: 50%;
+        left: -100%;
         top: 0;
         width: 55%;
         height: 100vh;
@@ -435,6 +435,12 @@ opciones del nav (móvil)*/
 
     .contenedor-nav label{
         width: auto;
+    }
+}
+
+@media screen and (max-width: 892px) and (min-width: 768px){
+    .contenedor-imagen{
+        display: none;
     }
 }
 
