@@ -436,6 +436,11 @@ opciones del nav (móvil)*/
     .contenedor-nav label{
         width: auto;
     }
+
+    .contenedor-marcas{
+        justify-content: center;
+        transform: scale(0.8);
+    }
 }
 
 @media screen and (max-width: 892px) and (min-width: 768px){
