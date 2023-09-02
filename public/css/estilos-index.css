@@ -1,5 +1,10 @@
+/*Importamos la fuente*/
 @import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@1,200&display=swap');
 
+
+
+/*:::::::::::::::::::::::::::::::::::NAVBAR:::::::::::::::::::::::::::::::::::*/
+/*Damos estilo a todos los elementos. (relleno 0, margen 0, fuente, etc)*/
 *{
     padding: 0;
     margin: 0;
@@ -10,6 +15,7 @@
     font-size: 16px;
 }
 
+/*Damos color al fondo*/
 body{
     background-color: #FAFAFA;
 }
@@ -18,6 +24,7 @@ body{
     display: inline-block;
 }
 
+/*Damos posicionamiento al contenedor del nav y sus elementos internnos*/
 .contenedor-nav{
     position: relative;
     width: 100%;
@@ -30,11 +37,14 @@ body{
     z-index: 1000;
 }
 
+/*Damos ancho a ciertos elementos utilizando selectores*/
 .lista-enlaces li > label,
-.lista-enlaces li > a{
+.lista-enlaces li > a,
+.log-Reg a{
     font-weight: 600;
 }
 
+/*Brindamos estilos a hover de algunos elementos*/
 .contenedor-nav a:visited{
     color: hsl(0, 0%, 41%);
 }
@@ -47,24 +57,32 @@ body{
     color: hsl(0, 0%, 8%);
 }
 
-.contenedor-nav :hover{
+.contenedor-nav label{
+    width: 90px;
+}
+
+.contenedor-nav label:hover{
     color: hsl(0, 0%, 8%);
 }
 
+/*Estilos del boton register*/
 #btn-register{
     padding: 5px 20px;
     border: 1px solid hsl(0, 0%, 8%);
     border-radius: 10px;
 }
 
+/*Centramos y damos espacioado al contenido de enlaces*/
 .contenedor-enlaces{
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 90%;
     gap: 40px;
+    flex-direction: row;
 }
 
+/*Centramos el contenido*/
 .contenedor-logo{
     display: flex;
     justify-content: space-between;
@@ -72,13 +90,16 @@ body{
     
 }
 
+/*Centramos el contenido y damos espaciado*/
 .lista-enlaces{
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 40px;
+    flex-direction: row;
 }
 
+/*Posición relativa*/
 .lista-enlaces li{
     position: relative;
     display: flex;
@@ -87,20 +108,12 @@ body{
 
 }
 
-.lista-enlaces select{
-    border: none;
-    background-color: transparent;
-}
-
-.lista-enlaces select:focus{
-    border: none;
-    background-color: rebeccapurple;
-}
-
+/*Escondemos checks de selectores*/
 .select-check{
     display: none;
 }
 
+/*Damos estilo al contenedor de las opciones de los selectores*/
 .caja-select{
     position: absolute;
     top: 40px;
@@ -113,20 +126,24 @@ body{
     padding: 10px 20px;
 }
 
+/*Selector para ancho, margen y display del elemento a*/
 .caja-select a{
     display: block;
     width: 80px;
     margin: 10px;
 }
 
+/*Para que el posicionamiento inicie desde la derecha*/
 #caja1{
     right: 0;
 }
 
+/*que inicie desde la izquierda */
 #caja2{
     left: 0;
 }
 
+/*Ocultamos íconos de selectores*/
 #i-2-1{
     display: none;
 }
@@ -135,10 +152,12 @@ body{
     display: none;
 }
 
+/*Ocultamos el check del nav responsive*/
 #check-res{
     display: none;
 }
 
+/*Contenedor de caja de selector*/
 .opcion{
     text-align: center;
     display: flex;
@@ -146,7 +165,7 @@ body{
     align-items: center;
 }
 
-
+/*Contenedores para separar los íconos del texto y centrar*/
 .con-i{
     width: 30%;
     text-align: center;
@@ -157,15 +176,18 @@ body{
     text-align: left;
 }
 
+/*Damnos margen a la derecha del contenedor logo*/
 .contenedor-logo{
     margin-right: 70px;
 }
 
+/*Posicionamiento del logo*/
 .logo{
     position: relative;
     top: 5px;
 }
 
+/*Centramos y separamos en contenido del div log-Reg*/
 .log-Reg{
     display: flex;
     justify-content: center;
@@ -177,6 +199,9 @@ body{
     display: none;
 }
 
+/*Creamos un div que ocupe toda la pantalla y le damos transición y un color oscuro, 
+lo ocultamos y solo se mostrará cuando el el check del nev se active para mostrar las 
+opciones del nav (móvil)*/
 .oscurecer {
     display: none;
     position: fixed;
@@ -189,11 +214,16 @@ body{
     z-index: 700; 
 }
 
+/*Ocultamos ícono de X*/
 .cerrar{
     display: none;
 }
 
+
+/*:::::::::::::::::::::::::::::::::::BODY:::::::::::::::::::::::::::::::::::*/
+/*Contenedor general del cuerpo, ocupa toda la pantalla y centra elementos*/ 
 .contenedor{
+    position: relative;
     width: 100%;
     height: auto;
     min-height: calc(100vh - 66px);
@@ -203,6 +233,7 @@ body{
     flex-direction: row;
 }
 
+/*Contenedor del texto e imagen*/
 .contenedor-cuerpo{
     width: 80%;
     height: auto;
@@ -213,6 +244,7 @@ body{
     flex-direction: row;
 }
 
+/*Contenedor de la imagen, centra elementos y se le asigna un ancho*/
 .contenedor-imagen{
     width: 50%;
     height: 70vh;
@@ -221,10 +253,12 @@ body{
     align-items: center;
 }
 
+/*Tamaño de imagen*/
 .contenedor-imagen img{
     width: 70%;
 }
 
+/*Contenedor del texto, centra elementos y se le proporciona dimensiones*/
 .contenedor-texto{
     display: flex;
     justify-content: start;
@@ -233,16 +267,19 @@ body{
     height: 70vh;
 }
 
+/*Estilos pra el titulo*/
 #titulo{
     font-size: 60px ;
     font-weight: bold;
     margin-bottom: 35px;
 }
 
+/*Ocultamos el titulo 2*/
 #titulo2{
     display: none;
 }
 
+/*Estilos para el párrafo del contenedor texto*/
 .contenedor-texto p{
     max-width: 380px;
     color: hsl(0, 0%, 41%);
@@ -250,6 +287,7 @@ body{
     margin-bottom: 35px;
 }
 
+/*Estilos del boton del contenedor texto*/
 .btn-inicio{
     background-color: hsl(0, 0%, 8%);
     color: white;
@@ -267,6 +305,7 @@ body{
     color: black;
 }
 
+/*Contenedor de las marcas, centra elementos y los justfica de forma proporcional*/
 .contenedor-marcas{
     display: flex;
     justify-content: space-between;
@@ -274,17 +313,11 @@ body{
     width: 80%;
 }
 
+/*margen para los íconos de marca*/
 .contenedor-marcas i{
     margin: auto 5px;
 }
-
-.titulo-texto-boton{
-    display: flex;
-    justify-content: left;
-    flex-direction: column;
-    gap: 40px;
-}
-
+ /*Se oculta imagen movil*/
 #img-movil{
     display: none;
 }
@@ -301,7 +334,7 @@ body{
         top: 0;
         width: 55%;
         height: 100vh;
-        transition: all 0.3s;
+        /*transition: all 0.3s;*/
     }
 
     .lista-enlaces{
@@ -399,4 +432,11 @@ body{
     .contenedor-texto p{
         text-align: center;
     }
+
+    .contenedor-nav label{
+        width: auto;
+    }
 }
+
+
+

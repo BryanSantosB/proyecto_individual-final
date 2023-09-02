@@ -30,16 +30,15 @@ function cambiarIconoMostrarOpciones(check, i1, i2, caja){
 
 function comprobarCheck(){
     if(check_res.checked){
-        //menu.style.display="block";
         menu.style.left = "45%";
         menu.style.boxShadow = "-5px 16px 20px rgba(0,0,0,0.25)";
     }else{
-        //menu.style.display = "none";
-        menu.style.left = "100%";
+        menu.style.left = "-100%";
         menu.style.boxShadow = "none";
     }
 }
 
+//Función para oscurecer el fondo
 function oscuro() {
     if (check_res.checked) {
         overlay.style.display = "block";
@@ -57,12 +56,13 @@ check2.addEventListener("change", function(){
     cambiarIconoMostrarOpciones(check2, i_1_2,i_2_2,caja_opciones2);
 })
 
-
+//Evento del check responsive
 check_res.addEventListener("change", function(){
     comprobarCheck();
     oscuro();
 });
 
+//Evento al recargar la página o redimensionar
 window.addEventListener('load', function() { //Evento al cargar página
 
     function desmarcarCheckbox() {
@@ -75,10 +75,3 @@ window.addEventListener('load', function() { //Evento al cargar página
     this.addEventListener('resize', desmarcarCheckbox); //Evento al redimensionar página
     desmarcarCheckbox();
 });
-
-
-
-
-
-
-
