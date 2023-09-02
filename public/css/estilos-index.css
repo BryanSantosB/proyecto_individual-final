@@ -327,7 +327,7 @@ opciones del nav (móvil)*/
 @media screen and (max-width: 767px) {
     .contenedor-enlaces{
         display: block;
-        position: absolute;
+        position: fixed;
         background-color: white;
         flex-direction: column;
         left: -100%;
